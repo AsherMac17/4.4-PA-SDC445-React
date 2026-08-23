@@ -1,0 +1,22 @@
+import React, { useState } from 'react';
+import Button from './Components/Button';
+import './App.css';
+import TextField from './Components/TextField'
+
+function App() {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+ };
+
+ return (
+  <div className="App">
+    <TextField value={inputValue} onChange={handleChange} />
+    <h1>Text Field Value: {inputValue}</h1>
+  </div>
+ );
+
+}
+
+export default App;
